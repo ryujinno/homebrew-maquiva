@@ -8,8 +8,9 @@ class UtilLinuxRename < Formula
   depends_on :autoconf
   depends_on :automake
 
-  def patches
-    [ DATA ]
+  patch do
+    url    'https://raw.githubusercontent.com/ryujinno/homebrew-makiba/master/patch/util-linux-rename/util-linux-2.27-no_use_flock.patch'
+    sha256 '1da3657f93a087c6926412bf0e71c299645e3ea63136a6a9d30af91fbc607594'
   end
 
   def install
@@ -27,20 +28,3 @@ class UtilLinuxRename < Formula
   end
 end
 
-#
-# rename command does not use flock().
-#
-
-__END__
-diff -urpN util-linux-2.27/configure.ac util-linux-2.27-no_use_flock/configure.ac
---- util-linux-2.27/configure.ac	2015-09-07 16:59:25.000000000 +0900
-+++ util-linux-2.27-no_use_flock/configure.ac	2015-10-26 11:06:32.000000000 +0900
-@@ -1382,7 +1382,7 @@ UL_REQUIRES_SYSCALL_CHECK([pivot_root], 
- AM_CONDITIONAL([BUILD_PIVOT_ROOT], [test "x$build_pivot_root" = xyes])
- 
- 
--UL_BUILD_INIT([flock], [yes])
-+UL_BUILD_INIT([flock], [no])
- UL_REQUIRES_HAVE([flock], [timer], [timer_create function])
- AM_CONDITIONAL([BUILD_FLOCK], [test "x$build_flock" = xyes])
- 
