@@ -28,7 +28,7 @@ class UtilLinuxRename < Formula
 end
 
 #
-# rename command is not use flock().
+# rename command does not use flock().
 #
 
 __END__
