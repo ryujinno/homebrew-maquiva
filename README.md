@@ -7,13 +7,13 @@ Homebrew tap of addtional formula.
 Add the tap like:
 
 ```
-brew tap ryujinno/makiba
+$ brew tap ryujinno/makiba
 ```
 
 Install package. Ex. `util-linux-rename` package:
 
 ```
-brew install util-linux-rename
+$ brew install util-linux-rename
 ```
 
 ## Uninstallation
@@ -21,13 +21,13 @@ brew install util-linux-rename
 Uninstall package. Ex. `util-linux-rename` package:
 
 ```
-brew uninstall util-linux-rename
+$ brew uninstall util-linux-rename
 ```
 
 Remove the tap like:
 
 ```
-brew untap ryujinno/makiba
+$ brew untap ryujinno/makiba
 ```
 
 ## Contributing
