@@ -9,7 +9,7 @@ class UtilLinuxRename < Formula
   depends_on :automake
 
   patch do
-    url    'https://raw.githubusercontent.com/ryujinno/homebrew-makiba/master/patch/util-linux-rename/util-linux-2.27-no_use_flock.patch'
+    url    'https://raw.githubusercontent.com/ryujinno/homebrew-maquiva/master/patch/util-linux-rename/util-linux-2.27-no_use_flock.patch'
     sha256 '1da3657f93a087c6926412bf0e71c299645e3ea63136a6a9d30af91fbc607594'
   end
 
