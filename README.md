@@ -40,4 +40,4 @@ $ brew untap ryujinno/maquiva
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Homebrew-maquiva is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
