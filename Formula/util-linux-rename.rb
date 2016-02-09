@@ -5,8 +5,9 @@ class UtilLinuxRename < Formula
   url      'http://www.kernel.org/pub/linux/utils/util-linux/v2.27/util-linux-2.27.tar.gz'
   sha256   '21ede7eb6c3a2a9c7b13eeee241e82428be4f6d5030ff488f638817f419af093'
 
-  depends_on :autoconf
-  depends_on :automake
+  depends_on 'autoconf'   => :build
+  depends_on 'automake'   => :build
+  depends_on 'pkg-config' => :build
 
   patch do
     url    'https://raw.githubusercontent.com/ryujinno/homebrew-maquiva/master/patch/util-linux-rename/util-linux-2.27-no_use_flock.patch'
@@ -16,7 +17,7 @@ class UtilLinuxRename < Formula
   def install
     system 'autoreconf'
     system './configure', '--disable-dependency-tracking', "--prefix=#{prefix}"
-    system 'make', 'rename' 
+    system 'make', 'rename'
     bin.install 'rename'
   end
 
