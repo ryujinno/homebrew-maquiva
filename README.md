@@ -1,5 +1,7 @@
 # Homebrew-maquiva
 
+[![Build Status](https://travis-ci.org/ryujinno/homebrew-maquiva.svg?branch=master)](https://travis-ci.org/ryujinno/homebrew-maquiva)
+
 Homebrew tap of addtional formula.
 
 ## Installation
