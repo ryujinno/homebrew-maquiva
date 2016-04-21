@@ -3,4 +3,4 @@ os: osx
 osx_image: xcode7.3
 
 script:
-  - test/test.sh
+  - build/test.sh
