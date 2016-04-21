@@ -2,20 +2,12 @@ require 'formula'
 
 class UtilLinuxRename < Formula
   homepage 'https://www.kernel.org/pub/linux/utils/util-linux/'
-  url      'http://www.kernel.org/pub/linux/utils/util-linux/v2.27/util-linux-2.27.tar.gz'
-  sha256   '21ede7eb6c3a2a9c7b13eeee241e82428be4f6d5030ff488f638817f419af093'
+  url      'http://www.kernel.org/pub/linux/utils/util-linux/v2.28/util-linux-2.28.tar.xz'
+  sha256   '395847e2a18a2c317170f238892751e73a57104565344f8644090c8b091014bb'
 
-  depends_on 'autoconf'   => :build
-  depends_on 'automake'   => :build
   depends_on 'pkg-config' => :build
 
-  patch do
-    url    'https://raw.githubusercontent.com/ryujinno/homebrew-maquiva/master/patch/util-linux-rename/util-linux-2.27-no_use_flock.patch'
-    sha256 '1da3657f93a087c6926412bf0e71c299645e3ea63136a6a9d30af91fbc607594'
-  end
-
   def install
-    system 'autoreconf'
     system './configure', '--disable-dependency-tracking', "--prefix=#{prefix}"
     system 'make', 'rename'
     bin.install 'rename'
