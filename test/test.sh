@@ -21,7 +21,7 @@ fi
 
 echo 'Install formula to sandbox'
 for formula in ${FORMULA_DIR}/*.rb; do
-  "${BREW_CMD}" install "${formula}"
+  "${BREW_CMD}" install -v "${formula}"
   cd "${CELLAR_DIR}"
   "${BREW_CMD}" uninstall *
 done
