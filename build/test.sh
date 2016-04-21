@@ -77,7 +77,7 @@ build() {
       pkg="${formula}"
     else
       pkg="${formula##*/}"
-      pkg="${HOMEBREW_TAP}/${formula%.rb}"
+      pkg="${HOMEBREW_TAP}/${pkg%.rb}"
     fi
 
     echo "Build ${pkg}"
