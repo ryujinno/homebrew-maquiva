@@ -2,8 +2,8 @@ require 'formula'
 
 class UtilLinuxRename < Formula
   homepage 'https://www.kernel.org/pub/linux/utils/util-linux/'
-  url      'http://www.kernel.org/pub/linux/utils/util-linux/v2.28/util-linux-2.28.tar.xz'
-  sha256   '395847e2a18a2c317170f238892751e73a57104565344f8644090c8b091014bb'
+  url      'http://www.kernel.org/pub/linux/utils/util-linux/v2.28/util-linux-2.28.1.tar.xz'
+  sha256   '3ece4ea4a34ef786b68f5c415e848390424232abd1ee00f7ee5bddc30657b60f'
 
   depends_on 'pkg-config' => :build
 
