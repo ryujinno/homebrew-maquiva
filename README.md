@@ -40,6 +40,3 @@ $ brew untap ryujinno/maquiva
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
-## License
-
-Homebrew-maquiva is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
